@@ -1,0 +1,167 @@
+body {
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+    background: #dedbdb;
+}
+
+#sign-up-section {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 30px;
+    justify-content: space-around;
+    justify-items: center;
+    width: 90%;
+}
+
+#sign-up-section .description {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+
+#sign-up-section .description h1 {
+    font-size: 60px;
+    color: #2a6e6e;
+}
+
+#sign-up-section .description h2 {
+    margin-top: 20px;
+    color: #555;
+}
+
+#sign-up-section .description .form-container {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition:  0.3s ease all;
+}
+form:hover{
+    box-shadow: 5px 5px 20px rgba(54, 53, 53, 0.395);
+    transform: translateY(-5px);
+}
+h2{
+    margin-bottom: 10px;
+}
+.input-container {
+    position: relative;
+    margin: 20px 0;
+}
+
+label {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    font-size: 14px;
+    font-weight: bold;
+    color: #555;
+    transition: 0.3s ease all;
+    pointer-events: none;
+}
+
+input {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #2a6e6e;
+}
+
+input:focus + label,input:not(:placeholder-shown)+label{
+    top: -20px;
+    left: 5px;
+    font-size: 12px;
+    color: #2a6e6e;
+}
+
+input[type="submit"] {
+    background: #2a6e6e;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 90%;
+    transition: background 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background: #238080;
+}
+
+.separator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+hr {
+    flex: 1;
+    height: 1px;
+    background: #ddd;
+    border: none;
+}
+
+.external-link{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+.external-link a {
+    text-decoration: none;
+    color: #2a6e6e;
+    padding: 5px;
+    border: 1px solid #2a6e6e;
+    border-radius: 10px;
+    text-align: center;
+    transition: background 0.3s ease, color 0.3s ease;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin: 10px;
+}
+a:hover{
+    background: #238080;
+    color: aliceblue;
+}
+img{
+    margin: 5px;
+}
+@media screen and (max-width: 1000px) {
+    #sign-up-section {
+        grid-template-columns: 1fr;
+        justify-content: center;
+        text-align: center;
+    }
+
+    #sign-up-section .description {
+        display: none;
+    }
+    h1 {
+        font-size: 40px;
+    }
+    .description{
+        display: none;
+    }
+}

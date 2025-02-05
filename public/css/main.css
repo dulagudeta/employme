@@ -1,0 +1,397 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: black;
+}
+.section-1 {
+    margin-top: 80px;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../css/images/header_image.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.section-1 .section-1-content {
+    width: 100%;
+    height: 100%;
+    padding: 50px;
+    background: rgba(0, 0, 0, 0.463);
+    text-align: center;
+    color: snow;
+    justify-content: center;
+    align-items: center;
+}
+.section-1 .section-1-content h1 {
+    font-size: 3rem;
+    width: 80%;
+    font-weight: 900;
+    margin-top: 30px;
+}
+.get-started {
+    margin-top: 30px;
+    padding: 20px;
+    text-align: start; 
+    width: 70%;
+    justify-items: start;
+}
+.section-1 .section-1-content .get-started p{
+    font-size: 30px;
+    margin: 20px;
+}
+.section-1 .section-1-content .get-started button{
+    padding: 20px;
+    font-size: 30px;
+    margin: 20px;
+    border-radius: 50px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.7s ease all;
+}
+.section-1 .section-1-content .get-started button:hover{
+    background: black;
+    color: #f9f9f9;
+}
+.popup-container{
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.848);
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    display: none;
+}
+.popup-container .pop-up{
+    padding: 20px;
+    background: #f9f9f9;
+    width: 40%;
+    position: relative;
+    box-shadow: 5px 10px 50px rgba(255, 255, 255, 0.516);
+}
+.popup-container .pop-up img{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background: #333;
+    cursor: pointer;
+} 
+.popup-container .pop-up .pop-up-description{
+    text-align: center;
+    padding: 20px;
+}
+.popup-container .pop-up .pop-up-description p{
+    font-size: 20px;
+}
+.popup-container .pop-up .pop-up-links{
+    display: flex;
+    justify-content: space-around;
+}
+.popup-container .pop-up .pop-up-links a{
+    padding: 10px 20px;
+    background: #2a6e6e;
+    color: #fefefe;
+    margin: 10px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 20px;
+}
+.section-2 {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-around;
+    padding: 40px 20px;
+    background: linear-gradient( to right, rgb(250, 249, 249) ,rgb(178, 236, 235) );
+}
+.section-2 .description-part{
+    text-align: left;
+    padding: 20px;
+}
+.section-2 .description-part h1{
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+.section-2 .description-part p{
+    font-size: 1.5rem;
+    color: #555;
+    text-align: start;
+}
+.section-2 .img-part img{
+    width: 300px;
+    height: 300px;
+}
+.section-3{
+    padding: 30px;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 20px;
+}
+.section-3 .left-panel-container{
+    display: flex;
+    flex-direction: column;
+    height: 200vh;
+}
+.section-3 .left-panel{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-around;
+    text-align: center;
+    overflow-y: auto;
+    box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.104);
+    padding: 20px;
+    height: 120vh;
+}
+.section-3 .left-panel h1{
+    grid-column: 1/3;
+    font-size: 30px;
+}
+.company{
+    width: fit-content;
+}
+.section-3 .left-panel .company img{
+    width: 100px;
+    height: 100px;
+}
+.section-3 .right-panel{
+    box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.104);
+    padding: 20px;
+    justify-items: center;
+}
+.section-3 .right-panel .jobs {
+    display: flex;
+    flex-direction: column;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: 0.3s ease all;
+    margin: 20px;
+    text-align: start;
+    justify-content: start;
+}
+.section-3 .right-panel .jobs .company-name {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+.section-3 .right-panel .jobs .company-name img {
+    width: 50px;
+    height: auto;
+    margin-right: 15px;
+}
+.jobs-description {
+    padding: 20px;
+    text-align: start;
+    justify-items: start;
+    flex: 1;
+}
+.section-3 .right-panel .jobs .jobs-description h1 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+.section-3 .right-panel .jobs .jobs-description p {
+    color: #404040;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+.section-3 .right-panel .jobs .jobs-description div{
+    justify-items: start;
+}
+.section-3 .right-panel .jobs button{
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    background: #28a745;
+    color: aliceblue;
+    border: none;
+    width: fit-content;
+    margin: 20px;
+}
+.section-3 .right-panel .jobs button:hover{
+    background: #218838;
+}
+.counters {
+    text-align: center;
+    margin-top: 20px;
+    grid-column: 1/3;
+  }
+  .counters ul {
+    display: inline-flex;
+    list-style: none;
+    padding: 0;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  .counters ul li {
+    padding: 10px 15px;
+    border-right: 1px solid #ccc;
+  }
+  .counters ul li:last-child {
+    border-right: none;
+  }
+  .counters ul li a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .counters ul li a:hover {
+    text-decoration: underline;
+  }
+  .section-4{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    padding: 50px;
+    justify-content: space-around;
+    text-align: center;
+    justify-items: center;
+    background: linear-gradient( to right, rgb(250, 249, 249) ,rgb(178, 236, 235) );
+  }
+  .section-4 h1{
+    grid-column: 1/3;
+  }
+  .section-4 div{
+    padding: 20px;
+    margin: 20px;
+    text-align: start;
+    justify-items: start;
+  }
+  .section-4 div ol li{
+    margin: 10px;
+  }
+  .apply-link {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 20px;
+    background: #f4f4f4;
+  }
+  
+  .apply-link a {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    background: #28a745;
+    color: #f4f4f4;
+  }
+@media (max-width: 1000px) {
+    .section-1 {
+        margin-top: 60px;
+    }
+    .section-1 .section-1-content {
+        padding: 30px;
+    }
+    .section-1 .section-1-content h1 {
+        font-size: 2.5rem;
+        width: 90%;
+        margin-top: 50px;
+    }
+    .section-1 .section-1-content .get-started {
+        padding: 20px;
+        width: 90%;
+    }
+    .section-1 .section-1-content .get-started p {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 780px) {
+    .section-1 .section-1-content h1 {
+        font-size: 2rem;
+        width: 95%;
+    }
+    .section-1 .section-1-content .get-started {
+        padding: 10px;
+        width: 85%;
+    }
+    .section-1 .section-1-content .get-started p {
+        font-size: 18px;
+    }
+    .popup-container .pop-up {
+        width: 80%;
+        padding: 15px;
+    }
+    .popup-container .pop-up .pop-up-links a {
+        font-size: 16px;
+        padding: 8px 15px;
+    }
+    .section-2 {
+        padding: 30px 15px;
+        grid-template-columns: auto;
+    }
+    .section-2 .description-part h1 {
+        font-size: 1.8rem;
+    }
+    .section-2 .description-part p {
+        font-size: 1rem;
+    }
+    .section-2 .img-part img {
+        max-width: 250px;
+    }
+    .section-3 {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+    .section-3 .left-panel {
+        padding: 15px;
+    }
+    .section-3 .right-panel .jobs {
+        margin: 10px 0;
+    }
+    .counters ul {
+        flex-wrap: wrap;
+    }
+    .counters ul li {
+        font-size: 14px;
+    }
+    .section-4{
+        grid-template-columns: auto;
+    }
+    .section-4 h1{
+        grid-column: 1/1;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-1 .section-1-content h1 {
+        font-size: 1.5rem;
+    }
+    .section-1 .section-1-content .get-started p {
+        font-size: 16px;
+    }
+    .popup-container .pop-up {
+        width: 90%;
+    }
+    .popup-container .pop-up .pop-up-links a {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+    .section-2 .description-part h1 {
+        font-size: 1.5rem;
+    }
+    .section-2 .description-part p {
+        font-size: 0.9rem;
+    }
+    .section-2 .img-part img {
+        max-width: 200px;
+    }
+    .section-3 .right-panel .jobs {
+        padding: 10px;
+    }
+    .counters ul li {
+        font-size: 12px;
+    }
+}

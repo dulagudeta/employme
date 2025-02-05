@@ -1,0 +1,279 @@
+#section {
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    height: 80vh;
+    gap: 0;
+    width: 100%;
+  }
+  
+  #section .left-panel {
+    background-color: black;
+    padding: 10px;
+    color: #f4f6f8;
+    height: calc(100vh - 20px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  #section .left-panel .profile img{
+    border-radius: 50%;
+    border: 3px solid blue;
+  }
+  #section .left-panel ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    list-style: none;
+  }
+  
+  #section .left-panel ul li {
+    padding: 10px;
+  }
+  
+  #section .left-panel ul li a,
+  #section .left-panel .profile a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+  }
+  
+  #section .profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  #section #quickMenu {
+    display: flex;
+    transform: translateX(-300px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: black;
+    color: white;
+    transition: transform 0.3s ease;
+    z-index: 1000;
+  }
+  
+  #section #quickMenu ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    list-style-type: none;
+  }
+  
+  #section #quickMenu ul li {
+    padding: 10px;
+  }
+  
+  #section #quickMenu ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+  }
+  
+  #section #quickMenu #close-left-panel {
+    padding: 10px;
+    cursor: pointer;
+    width: 50px;
+  }
+  
+  #section .menu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  #section .menu button {
+    padding: 10px 20px;
+    border: none;
+    background: black;
+    color: whitesmoke;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  #section .right-panel {
+    padding: 20px;
+    overflow-y: auto;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    text-align: center;
+    overflow-x: auto;
+  }
+  
+  #section .right-panel .panel-header {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  #section .right-panel .panel-header h1 {
+    font-size: 50px;
+  }
+  
+  #section .right-panel .search-container {
+    margin-top: 30px;
+    padding: 10px;
+    text-align: start;
+    width: 100%;
+  }
+  
+  #section .right-panel .search-container form {
+    display: flex;
+    gap: 10px;
+    text-align: start;
+    margin: 20px;
+    justify-content: space-around;
+  }
+  
+  input[type="search"] {
+    padding: 10px;
+    border-radius: 20px;
+    width: 80%;
+    border: 2px solid #ccc;
+    font-size: 1rem;
+  }
+  
+  button[type="submit"] {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+.section{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 30px;
+    padding: 50px;
+    margin: 50px;
+    align-items: center;
+    justify-content: center;
+}
+.section a{
+    padding: 10px 20px;
+    text-align: center;
+    border: 1px solid black;
+    background: #007bff;
+    color: aliceblue;
+    text-decoration: none;
+    display: block;
+    width: 80%;
+    font-size: 30px;
+    font-weight: bold;
+}
+table{
+  width: 100%;
+  border: 1px solid black;
+  border-collapse: collapse;
+  overflow-x: auto;
+}
+th{
+  border: 2px solid black;
+  background: #cac9c9;
+  font-size: 20px;
+  padding: 10px;
+}
+td{
+  border: 1px solid black;
+  padding: 5px;
+}
+td img{
+  width: 50px;
+  height: 50px;
+}
+td a{
+  background: #ff3366;
+  color: aliceblue;
+  text-decoration: none;
+  border-radius: 8px;
+  padding: 5px;
+}
+#section .right-panel form{
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  justify-content: start;
+  text-align: start;
+}
+#section .right-panel form input{
+  margin: 10px;
+  padding: 10px;
+}
+input[type="submit"]{
+  background: #007bff;
+  color: #f4f6f8;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+@media (max-width: 992px) {
+  #section{
+    grid-template-columns: auto;
+  }
+  .section{
+    grid-template-columns: auto;
+  }
+  #section .left-panel {
+      display: none;
+  }
+
+  #section .menu {
+      display: flex;
+  }
+
+}
+
+@media (max-width: 768px) {
+  #section .right-panel .panel-header h1 {
+      font-size: 2rem;
+  }
+  #section .right-panel form{
+    width: 90%;
+  }
+}
+
+@media (max-width: 576px) {
+  #section .right-panel .panel-header h1 {
+      font-size: 1.5rem;
+  }
+  input[type="search"] {
+      width: 100%;
+      font-size: 0.9rem;
+  }
+  button[type="submit"] {
+      font-size: 0.8rem;
+      padding: 5px 15px;
+      width: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  #section .left-panel {
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+  }
+  #section .left-panel ul li {
+    padding: 20px;
+    font-size: 20px;
+}
+}
+

@@ -1,0 +1,116 @@
+body {
+    background: linear-gradient(135deg, #dedbdb, #ffffff);
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+.login-container{
+   justify-content: center;
+   align-items: center;
+   justify-items: center;
+   margin-top: 80px;
+   padding: 20px;
+}
+form {
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.form:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.input-container{
+    position: relative;
+    width: 100%;
+    margin: 10px;
+    padding: 0;
+}
+label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #555;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    transition: 500ms ease all;
+}
+
+input {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+    width: 90%;
+}
+
+input:focus {
+    border-color: #2a6e6e;
+    outline: none;
+}
+input:focus+label,input:not(:placeholder-shown)+label{
+    top: -20px;
+    font-size: 12px;
+    color: #2a6e6e;
+}
+input[type='submit'] {
+    background: #2a6e6e;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+input[type='submit']:hover {
+    background: #238080;
+}
+
+a {
+    font-size: 14px;
+    color: #047b90;
+    text-decoration: none;
+    margin-top: 10px;
+    text-align: center;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #034d5e;
+}
+
+.separator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 15px 0;
+}
+
+hr {
+    flex: 1;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    margin: 0 10px;
+}
+
+
+p {
+    font-size: 14px;
+    color: #555;
+}
+
+

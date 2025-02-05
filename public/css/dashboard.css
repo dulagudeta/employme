@@ -1,0 +1,718 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f6f8;
+}
+
+#section {
+  margin: 90px 0 50px;
+  display: grid;
+  grid-template-columns: 25% 75%;
+  height: 100vh;
+  gap: 0;
+  width: 100%;
+}
+
+#section .left-panel {
+  background-color: #2c3e50;
+  padding: 20px;
+  color: #f4f6f8;
+  height: calc(100vh - 20px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+#section .left-panel .profile img {
+  border-radius: 50%;
+  border: 3px solid #3498db;
+  width: 100px;
+  height: 100px;
+}
+
+#section .left-panel ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  list-style: none;
+}
+
+#section .left-panel ul li {
+  padding: 15px;
+}
+
+#section .left-panel ul li a,
+#section .left-panel .profile a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.3s ease all;
+}
+
+#section .left-panel ul li a:hover {
+  color: #e74c3c;
+}
+
+#section .profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#section #quickMenu {
+  display: flex;
+  transform: translateX(-300px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100vh;
+  background-color: #2c3e50;
+  color: white;
+  transition: transform 0.3s ease;
+  z-index: 1000;
+}
+
+#section #quickMenu ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  list-style-type: none;
+}
+
+#section #quickMenu ul li {
+  padding: 15px;
+}
+
+#section #quickMenu ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+#section #quickMenu #close-left-panel {
+  padding: 10px;
+  cursor: pointer;
+  width: 50px;
+}
+
+#section .menu {
+  display: none;
+  position: absolute;
+  top: 60px;
+  left: 0;
+}
+
+#section .menu button {
+  padding: 10px 20px;
+  border: none;
+  background: #2c3e50;
+  color: whitesmoke;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#section .right-panel {
+  padding: 20px;
+  overflow-y: auto;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+#section .right-panel .panel-header {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+#section .right-panel .panel-header h1 {
+  font-size: 50px;
+  color: #2c3e50;
+}
+
+#section .right-panel .search-container {
+  margin-top: 30px;
+  padding: 10px;
+  text-align: start;
+  width: 100%;
+}
+
+#section .right-panel .search-container form {
+  display: flex;
+  gap: 10px;
+  text-align: start;
+  margin: 20px;
+  justify-content: space-around;
+  width: 90%;
+}
+
+input[type="search"] {
+  padding: 10px;
+  border-radius: 20px;
+  width: 80%;
+  border: 2px solid #ccc;
+  font-size: 1rem;
+}
+
+button[type="submit"] {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #2980b9;
+}
+
+.section-2 {
+  text-align: center;
+  margin: 50px;
+}
+
+.section-2 h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.section-2 p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.view-more {
+  grid-column: 1/3;
+  padding: 20px;
+}
+
+.view-more a {
+  padding: 10px;
+  text-decoration: none;
+  background: #3498db;
+  color: #f4f6f8;
+  width: 200px;
+  display: block;
+  text-align: center;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.view-more a:hover {
+  background-color: #2980b9;
+}
+
+.job-list-container {
+  padding: 20px;
+  background-color: #fff;
+  border-bottom: 1px solid black;
+  width: 100%;
+  text-align: start;
+}
+
+.job-list-container #jobs-header {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.job-list-container .jobs {
+  display: flex;
+  flex-direction: column;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: 0.3s ease;
+  margin: 10px;
+  justify-content: left;
+  text-align: left;
+  width: 90%;
+  align-content: start;
+}
+
+.job-list-container .company-name {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.job-list-container .company-name img {
+  width: 50px;
+  height: auto;
+  margin-right: 15px;
+}
+
+.job-list-container .jobs-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  padding: 20px;
+  text-align: start;
+  flex: 1;
+}
+
+.job-list-container .jobs-description h1 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.job-list-container .jobs-description p {
+  color: #666;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.apply-link {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 20px;
+  background: #f4f4f4;
+}
+
+.apply-link a {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.apply-link a:first-child {
+  background: #28a745;
+  color: white;
+}
+
+.apply-link a:first-child:hover {
+  background: #218838;
+}
+
+.apply-link a:last-child {
+  background: #ffc107;
+  color: white;
+}
+
+.apply-link a:last-child:hover {
+  background: #e0a800;
+}
+
+.counters {
+  text-align: center;
+  margin-top: 20px;
+  grid-column: 1/3;
+}
+
+.counters ul {
+  display: inline-flex;
+  list-style: none;
+  padding: 0;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.counters ul li {
+  padding: 10px 15px;
+  border-right: 1px solid #ccc;
+}
+
+.counters ul li:last-child {
+  border-right: none;
+}
+
+.counters ul li a {
+  text-decoration: none;
+  color: #3498db;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.counters ul li a:hover {
+  text-decoration: underline;
+}
+
+#section .right-panel .profile-container {
+  margin: 30px;
+  padding: 20px;
+  color: #0c0c0c;
+  box-shadow: 5px 8px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+#section .right-panel .profile-container h1 {
+  margin: 10px;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+#section .right-panel .profile-container p {
+  margin: 10px;
+  font-size: 1.2rem;
+  text-align: left;
+}
+
+#section .right-panel .profile-container img {
+  border: 5px solid #030303;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #3498db;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #2980b9;
+}
+
+#section .right-panel .profile-container .profile-detail {
+  margin-top: 50px;
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+
+#section .right-panel .form-container {
+  background: #fefefe;
+  padding: 20px;
+  margin: 20px auto;
+  box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.356);
+  width: 80%;
+}
+
+#section .right-panel .form-container form {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  width: 90%;
+}
+#section .right-panel .form-container .alert{
+  color: red;
+}
+#section .right-panel .form-container form input,
+textarea,
+select {
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px;
+  border: 1px solid gray;
+}
+
+input[type="submit"] {
+  background: #3498db;
+  border-radius: 8px;
+  color: aliceblue;
+  cursor: pointer;
+  font-size: 20px;
+  width: fit-content;
+}
+
+.right-panel .job-body {
+  text-align: start;
+  padding: 20px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.right-panel .job-body h1 {
+  font-size: 30px;
+  margin: 10px;
+}
+
+.right-panel .job-body p {
+  margin: 10px;
+}
+
+.right-panel .job-body .job-btn {
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.right-panel .job-body .job-btn  a {
+  padding: 10px;
+  background: #3498db;
+  color: whitesmoke;
+  text-decoration: none;
+  border-radius: 8px;
+  margin: 10px;
+}
+
+.right-panel .job-body .job-btn button {
+  padding: 10px;
+  background: #ffc107;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.company-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 20px;
+  width: 100%;
+  justify-content: space-around;
+  padding: 20px;
+  margin: 20px;
+}
+
+.company-container .company-h1 {
+  grid-column: 1/4;
+}
+
+.company-container .companies {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  text-align: center;
+  background: #f4f4f4;
+}
+
+.company-container .companies div,
+p {
+  margin: 10px;
+}
+
+.company-container .counters {
+  grid-column: 1/4;
+}
+
+.company-container .companies .job-btn a {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  font-size: 1rem;
+  text-decoration: none;
+  background: #ffc107;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.company-container .companies .job-btn a:hover {
+  background: #e0a800;
+}
+
+.applicants {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.applicants .applicant {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  padding: 20px;
+  box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.301);
+  justify-content: left;
+}
+
+.applicants .applicant img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+@media (max-width: 1200px) {
+  #section {
+    grid-template-columns: 30% 70%;
+  }
+
+  .company-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 992px) {
+  #section {
+    grid-template-columns: auto;
+    height: auto;
+  }
+
+  #section .left-panel {
+    display: none;
+  }
+
+  #section .menu {
+    display: flex;
+  }
+
+  .company-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  #section .right-panel .panel-header h1 {
+    font-size: 2rem;
+  }
+
+  .job-list-container .jobs-description h1 {
+    font-size: 1.2rem;
+  }
+
+  #section .right-panel .form-container {
+    width: 100%;
+  }
+
+  .job-list-container .jobs-description p {
+    font-size: 0.9rem;
+  }
+
+  .right-panel .job-body {
+    width: 100%;
+    padding: 5px;
+  }
+
+  .right-panel .job-body div {
+    width: 100%;
+    padding: auto;
+    margin: 0;
+  }
+
+  .right-panel .job-body div a {
+    padding: 5px;
+    font-size: 15px;
+  }
+
+  .right-panel .job-body div button {
+    padding: 5px;
+    font-size: 15px;
+  }
+
+  .applicants {
+    grid-template-columns: auto auto;
+  }
+}
+
+@media (max-width: 576px) {
+  #section .right-panel .panel-header h1 {
+    font-size: 1.5rem;
+  }
+
+  input[type="search"] {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+
+  button[type="submit"] {
+    font-size: 0.8rem;
+    padding: 5px 15px;
+    width: 150px;
+  }
+
+  .section-2 h1 {
+    font-size: 1.8rem;
+  }
+
+  .section-2 p {
+    font-size: 1rem;
+  }
+
+  .job-list-container {
+    padding: 10px;
+  }
+
+  .job-list-container .jobs {
+    margin: 5px;
+  }
+
+  .job-list-container .company-name img {
+    width: 40px;
+  }
+
+  .job-btn button {
+    font-size: 0.8rem;
+    padding: 8px;
+  }
+
+  .company-container {
+    padding: 10px;
+    grid-template-columns: auto auto;
+  }
+
+  .company-container .company-h1 {
+    grid-column: 1/3;
+  }
+
+  .company-container .companies {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  #section .left-panel {
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+  }
+
+  #section .left-panel ul li {
+    padding: 20px;
+    font-size: 20px;
+  }
+
+  #section .right-panel .profile-container h1 {
+    font-size: 1.5rem;
+  }
+
+  #section .right-panel .profile-container p {
+    font-size: 1rem;
+  }
+
+  .job-list-container .jobs-description h1 {
+    font-size: 1rem;
+  }
+
+  .job-list-container .jobs-description p {
+    font-size: 0.8rem;
+  }
+
+  .btn {
+    font-size: 0.8rem;
+    padding: 8px 15px;
+  }
+
+  .company-container .companies div,
+  .company-container .companies p {
+    font-size: 0.9rem;
+  }
+}
